@@ -27,15 +27,14 @@ get_header();
             
             $args = array(
                 "category_name" => "Atelier",
-                "posts_per_page" => -1, 
+                "posts_per_page" => 16, 
                 "orderby" => "post_name",
                 "order" => "ASC"
             );
            
             $query1 = new WP_Query( $args );
-            while ( have_posts() ) :
+            while ( $query1->have_posts() ) :
                 $query1->the_post();
-				the_post();
                 echo '<h3>' . $i++ . '.' . get_the_title() . '___' . '<span class="ateliers_num">' . get_post_field('post_name') . '</span>' . '___' . '<span class="ateliers_auteur">' . get_the_author_meta('display_name', $post->post_author) . '</span>' . '</h3>';
 				/*
 				 * Include the Post-Type-specific template for the content.
@@ -45,9 +44,6 @@ get_header();
 				//get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
-
-			the_posts_navigation();
-
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
