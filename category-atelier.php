@@ -23,10 +23,20 @@ get_header();
 			</header><!-- .page-header -->
 
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
+            /* Start the Loop */
+            
+            $args = array(
+                "category_name" => "Atelier",
+                "posts_per_page" => -1, 
+                "orderby" => "post_name",
+                "order" => "ASC"
+            );
+           
+            $query1 = new WP_Query( $args );
+            while ( have_posts() ) :
+                $query1->the_post();
 				the_post();
-                echo '<h3>' . $i++ . '.' . get_the_title() . '___' . '</h3>';
+                echo '<h3>' . $i++ . '.' . get_the_title() . '___' . '<span class="ateliers_num">' . get_post_field('post_name') . '</span>' . '___' . '<span class="ateliers_auteur">' . get_the_author_meta('display_name', $post->post_author) . '</span>' . '</h3>';
 				/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
