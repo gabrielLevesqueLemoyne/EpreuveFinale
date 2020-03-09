@@ -47,4 +47,31 @@
       justify-content: space-around;
   padding: 10px;
 }
+
+.ateliers_tab {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 8fr;
+      grid-template-columns: 2fr 8fr;
+  -ms-grid-rows: 4fr 2fr;
+      grid-template-rows: 4fr 2fr;
+}
+
+.ateliers_titre {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 8;
+}
+
+.ateliers_noms {
+  -ms-grid-row: 10;
+      grid-row-start: 10;
+  grid-row-end: 14;
+}
+
+.ateliers_prof {
+  -ms-grid-row: 6;
+      grid-row-start: 6;
+  grid-row-end: 6;
+}
 /*# sourceMappingURL=style.css.map */

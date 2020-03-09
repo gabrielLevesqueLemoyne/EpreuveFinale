@@ -1,0 +1,20 @@
+.ateliers_tab {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    grid-template-rows: 4fr 2fr;
+}
+
+.ateliers_titre {
+    grid-row-start: 1;
+    grid-row-end: 8;
+}
+
+.ateliers_noms {
+    grid-row-start: 10;
+    grid-row-end: 14;
+}
+
+.ateliers_prof {
+    grid-row-start: 6;
+    grid-row-end: 6;
+}
