@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-//////////////// category-atelier 
+	<h1>Bienvenue a la page des Ateliers</h1>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 

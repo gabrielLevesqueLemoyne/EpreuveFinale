@@ -32,4 +32,19 @@
 .ateliers_num {
   color: red;
 }
+
+#primary-menu {
+  text-decoration: none;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+}
 /*# sourceMappingURL=style.css.map */
